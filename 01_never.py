@@ -19,6 +19,13 @@ soup = BeautifulSoup(html, "html.parser")
 
 total_area = soup.select(".total_area")
 
+timeline_area = soup.select(".timeline_area")
+
+if total_area:
+    areas = total_area
+elif timeline_area:
+    areas = timeline_area
+
 #titles = soup.select(".api_txt_lines.total_tit")
 #names = soup.select(".sub_txt.sub_name")
 
